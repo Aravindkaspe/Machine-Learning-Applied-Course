@@ -1,0 +1,201 @@
+Machine Learning:
+Machine learning (ML) is a subset of artificial intelligence (AI) that involves the development of algorithms and statistical models that enable computers to perform tasks without explicit programming. Machine learning systems learn from data and improve their performance over time as they are exposed to more information. 
+
+Sample Complexity:
+
+Definition: Sample complexity refers to the number of examples or instances required for a machine learning algorithm to learn a target function accurately.
+
+Time Complexity:
+
+Definition: Time complexity is a measure of the computational resources, particularly the time, needed by an algorithm to complete its task.
+
+Space Complexity:
+
+Definition: Space complexity refers to the amount of memory or storage required by an algorithm to perform a task.
+
+ Classification: Assign a category to each item: documents- politics, business, sports, weather.
+• Regression: Predict a real value to each item: prediction of stock values.
+• Ranking: Order items according to some criterion: Web search.
+• Clustering: Partition items into homogeneous regions: context of social network analysis.
+• Dimensionality reduction or Manifold learning: Transform initial representation of items 
+into a lower dimensional representation: preprocessing digital images.
+
+Overfitting
+a statistical model describes random error or noise instead 
+of the underlying relationship. Overfitting occurs when a 
+model is excessively complex, such as having too many 
+parameters relative to the number of observations. 
+A model that has been overfit has poor predictive performance, 
+as it overreacts to minor fluctuations in the training data
+
+Cross Validation
+In k-fold cross-validation, the original sample is randomly partitioned into k equal sized subsamples. 
+Of the k subsamples, a single subsample is retained as the validation data for testing the model, and 
+the remaining k − 1 subsamples are used as training data.
+
+Learning Scenarios
+• Supervised learning: The learner receives a set of labeled examples as training data and makes 
+predictions for all unseen points: classification, regression, and ranking problems, and Spam 
+detection.
+• Unsupervised learning: The learner exclusively receives unlabeled training data, and makes 
+predictions for all unseen points: Clustering and dimensionality reduction.
+• Semi-supervised learning: The learner receives a training sample consisting of both labeled 
+and unlabeled data, and makes predictions for all unseen points: classification, regression, 
+ranking tasks
+
+Methods
+ Reinforcement Learning
+There would be an agent that we want to train over a period of time so that it can interact
+with a specific environment. The agent will follow a set of strategies for interacting with the
+environment and then after observing the environment it will take actions regards the current
+state of the environment. The following are the main steps of reinforcement learning
+methods:
+o Step1: First, we need to prepare an agent with some initial set of strategies.
+o Step2: Then observe the environment and its current state.
+o Step3: Next, select the optimal policy regards the current state of the environment
+and perform important action.
+o Step4: Now, the agent can get corresponding reward or penalty as per accordance
+with the action taken by it in previous step.
+o Step5: Now, we can update the strategies if it is required so.
+o Step6: At last, repeat steps 2-5 until the agent got to learn and adopt the optimal
+policies.
+ Batch Learnings
+We have end-to-end Machine Learning systems in which we need to train the model in one
+go by using whole available training data. Such kind of learning method or algorithm is called
+Batch or Offline learning. It is called Batch or Offline learning because it is a one-time
+procedure, and the model will be trained with data in one single batch. The following are the
+main steps of Batch learning methods:
+o Step1: First, we need to collect all the training data to start training the model.
+o Step2: Now, start the training of model by providing whole training data in one go.
+o Step3: Next, stop the learning/training process once you got satisfactory
+results/performance.
+o Step4: Finally, deploy this trained model into production. Here, it will predict the
+output for new data samples.
+CSCI 5930 -Rahmani-Week2 – 2.1 Learning Methods
+===========================================================================
+2
+ Online Learnings
+It is completely opposite to the batch or offline learning methods. In these learning methods,
+the training data is supplied in multiple incremental batches, called minibatches, to the
+algorithm. Followings are the main steps of Online learning methods:
+o Step1: First, we need to collect all the training data for starting training of the model.
+o Step2: Now, start the training of model by providing a mini-batch of training data to
+the algorithm.
+o Step3: Next, we need to provide the mini-batches of training data in multiple
+increments to the algorithm.
+o Step4: As it will not stop batch learning hence after providing whole training data in
+mini-batches, provide new data samples also to it.
+o Step5: Finally, it will keep learning over a period based on the new data samples.
+
+Generalizations
+ Instance based Learning
+It is opposite to the previously studied learning methods in the way that this kind of learning
+involves ML systems as well as methods that uses the raw data points themselves to draw
+the outcomes for newer data samples without building an explicit model on training data.
+In simple words, instance-based learning basically starts working by looking at the input
+data points and then using a similarity metric, it will generalize and predict the new data
+points.
+ Model based Learning In Model based learning methods, an iterative process takes place
+on the ML models that are built based on various model parameters, called
+hyperparameters and in which input data is used to extract the features. In this learning,
+hyperparameters are optimized based on various model validation techniques. That is why
+we can say that Model based learning methods uses more traditional ML approach
+towards generalization.
+
+
+
+Feature Selection
+Feature selection strategies can be divided into three main areas based on the type of strategy and
+techniques employed for the same. They are described briefly as follows.
+ Filter methods:
+These techniques select features purely based on metrics like correlation, mutual information
+and so on. These methods do not depend on results obtained from any model and usually
+check the relationship of each feature with the response variable to be predicted. Popular
+methods include threshold based methods and statistical tests.
+ Wrapper methods:
+These techniques try to capture interaction between multiple features by using a recursive
+approach to build multiple models using feature subsets and select the best subset of features
+giving us the best performing model. Methods like backward selecting and forward
+elimination are popular wrapper based methods.
+ Embedded methods:
+These techniques try to combine the benefits of the other two methods by leveraging Machine
+Learning models themselves to rank and score feature variables based on their importance.
+Tree based methods like decision trees and ensemble methods like random forests are
+popular examples of embedded methods.
+Statistical Methods
+select features based on univariate statistical tests. You can use several statistical tests for regression
+and classification-based models including mutual information, ANOVA (analysis of variance) and
+chi-square tests. Based on scores obtained from these statistical tests, you can select the best features
+based on their score.
+Recursive Feature Elimination
+You can also rank and score features with the help of a Machine Learning based model estimator
+such that you recursively keep eliminating lower scored features till you arrive at the specific feature
+subset count. Recursive Feature Elimination, also known as RFE, is a popular wrapper based feature
+selection technique, which allows you to use this strategy. The basic idea is to start off with a specific
+Machine Learning estimator like the Logistic Regression algorithm we used for our classification
+
+
+
+Statistical Methods
+select features based on univariate statistical tests. You can use several statistical tests for regression
+and classification-based models including mutual information, ANOVA (analysis of variance) and
+chi-square tests. Based on scores obtained from these statistical tests, you can select the best features
+based on their score.
+Recursive Feature Elimination
+You can also rank and score features with the help of a Machine Learning based model estimator
+such that you recursively keep eliminating lower scored features till you arrive at the specific feature
+subset count. Recursive Feature Elimination, also known as RFE, is a popular wrapper based feature
+selection technique, which allows you to use this strategy. The basic idea is to start off with a specific
+Machine Learning estimator like the Logistic Regression algorithm we used for our classification
+CSCI 5930 -Rahmani-Week2 – 2.1 Feature Engineering Selection
+===========================================================================
+2
+needs. Next we take the entire feature set of 30 features and the corresponding response class
+variables. RFE aims to assign weights to these features based on the model fit. Features with the
+smallest weights are pruned out and then a model is fit again on the remaining features to obtain the
+new weights or scores. This process is recursively carried out multiple times and each time features
+with the lowest scores/weights are eliminated, until the pruned feature subset contains the desired
+number of features that the user wanted to select (this is taken as an input parameter at the start).
+This strategy is also popularly known as backward elimination
+
+Statistical Methods
+select features based on univariate statistical tests. You can use several statistical tests for regression
+and classification-based models including mutual information, ANOVA (analysis of variance) and
+chi-square tests. Based on scores obtained from these statistical tests, you can select the best features
+based on their score.
+Recursive Feature Elimination
+You can also rank and score features with the help of a Machine Learning based model estimator
+such that you recursively keep eliminating lower scored features till you arrive at the specific feature
+subset count. Recursive Feature Elimination, also known as RFE, is a popular wrapper based feature
+selection technique, which allows you to use this strategy. The basic idea is to start off with a specific
+Machine Learning estimator like the Logistic Regression algorithm we used for our classification
+CSCI 5930 -Rahmani-Week2 – 2.1 Feature Engineering Selection
+===========================================================================
+2
+needs. Next we take the entire feature set of 30 features and the corresponding response class
+variables. RFE aims to assign weights to these features based on the model fit. Features with the
+smallest weights are pruned out and then a model is fit again on the remaining features to obtain the
+new weights or scores. This process is recursively carried out multiple times and each time features
+with the lowest scores/weights are eliminated, until the pruned feature subset contains the desired
+number of features that the user wanted to select (this is taken as an input parameter at the start).
+This strategy is also popularly known as backward elimination.
+Model Based Selection
+Tree based models like decision trees and ensemble models like random forests (ensemble of trees)
+can be utilized not just for modeling alone but for feature selection. These models can be used to
+compute feature importance when building the model that can in turn be used for selecting the best
+features and discarding irrelevant features with lower scores. Random forest is an ensemble model.
+This can be used as an embedded feature selection method, where each decision tree model in the
+ensemble is built by taking a training sample of data from the entire dataset. This sample is a
+bootstrap sample (sample taken with replacement). Splits at any node are taken by choosing the best
+split from a random subset of the features rather than taking all the features into account. This
+randomness tends to reduce the variance of the model at the cost of slightly increasing the bias
+
+Skewness of Data
+ The presence of skewness in data requires the correction at data preparation stage so
+that we can get more accuracy from our model.
+ Most of the ML algorithms assume that data has a Gaussian distribution i.e. either
+normal of bell curved data.
+
+Preprocessing techniques:
+->normlization: it is used to scale the features of the data to a standard range.
+   The goal is to bring all features to a similar scale so that no single feature dominates the others. This is important for many machine learning algorithms because it ensures that the model is not biased towards features with larger scales.
